@@ -1,0 +1,24 @@
+.sub-container {
+  width: 80%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin: 5%;
+}
+.panel1 {
+  width: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 2% 2%;
+}
+.panel2 {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 2%;
+}
+.dash-container {
+  width: 80%;
+  display: inline-flex;
+  justify-content: space-around;
+  margin: 5%;
+}
