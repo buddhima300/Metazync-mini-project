@@ -141,6 +141,7 @@ The frontend application will run on `http://localhost:3000`.
 ### Admin Endpoints:
 - `POST /admin/addservice`: Add a new cleaning service
 - `GET /admin/getservice`: Fetch all cleaning services
+- `UPDATE /admin/updateservice/:id`: update a service
 - `DELETE /admin/deleteservice/:id`: Delete a service
 
 ---
