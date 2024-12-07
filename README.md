@@ -1,5 +1,5 @@
 # Metazync-mini-project
-Below is a sample `README.md` file for your Cleaning Service Management Mini Project:
+**Note : You can use buddhima@gmail.com && 123 for admin username and password to login admin dashboard.
 
 ---
 
@@ -23,6 +23,12 @@ A mini project for managing cleaning service bookings. This web application prov
   - **Frontend**: React with Material UI/Tailwind CSS
   - **Backend**: Node.js with Express.js
   - **Database**: MongoDB
+
+---
+## Screenshot
+
+![client](client.png "Screenshot of My Project")
+![admin](admin.png "Screenshot of My Project")
 
 ---
 
