@@ -22,6 +22,47 @@ function Services() {
       console.log(error);
     }
   };
+  // function to update service
+  const handleEdit = async (e) => {
+    e.preventDefault();
+
+    const newservice = prompt("Enter the new service");
+    const updateService = {
+      service: service,
+      NewService: newservice,
+    };
+    try {
+      const response = await axios.put(
+        "http://localhost:5000/admin/updateservice",
+        updateService
+      );
+      if (response.status === 200) {
+        console.log(response.data);
+        alert("Service is Updated");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  // function to delete service
+  const handleDelete = async (e) => {
+    e.preventDefault();
+
+    // const newservice = prompt("Enter the new service");
+    const DeleteService = { service: service }; // this should be pass as the part of the data object in delete method
+    try {
+      const response = await axios.delete(
+        "http://localhost:5000/admin/deleteservice",
+        { data: DeleteService }
+      );
+      if (response.status === 200) {
+        console.log(response.data);
+        alert("Service is Deleted");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="services-container">
@@ -53,12 +94,14 @@ function Services() {
         </button>
         <button
           type="button"
+          onClick={handleEdit}
           class="text-white bg-green-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Edit Service
         </button>
         <button
           type="button"
+          onClick={handleDelete}
           class="text-white bg-red-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Delete Service
